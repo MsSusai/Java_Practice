@@ -1,8 +1,20 @@
 public class VendingMachine
 {
-    int price = 80;
+    int price;
     int balance;
     int total;
+
+    VendingMachine()  // 构造函数
+    {
+        this.total = 0;
+    }
+
+    VendingMachine(int price) // 函数重载
+    {
+//        this(); // 在重载函数中调用构造函数
+        this.price = price;
+        this.total = 0;
+    }
 
     void showPrompt()
     {
@@ -32,7 +44,8 @@ public class VendingMachine
 
     public static void main(String[] args)
     {
-        VendingMachine vm = new VendingMachine();
+        VendingMachine vm = new VendingMachine(80);
+        VendingMachine vm1 = new VendingMachine();
         vm.showPrompt();
         vm.showBalance();
         vm.insertMoney(100);
