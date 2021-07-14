@@ -1,3 +1,5 @@
+package practice;
+
 import java.util.Scanner;
 
 public class NumberGame_02
